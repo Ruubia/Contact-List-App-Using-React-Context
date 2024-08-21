@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 
-cosnt ContactCard = ({ id, name, addres, phone, email, onDeleteClick }) => {
+export const ContactCard = ({ id, name, address, phone, email, onDeleteClick }) => {
   return (
     <li className="list-group-item">
       <div className="row w-100">
@@ -40,5 +40,3 @@ ContactCard.propTypes = {
     email: PropTypes.string.isRequired,
     onDeleteClick: PropTypes.func.isRequired,
 };
-
-export default ContactCard;

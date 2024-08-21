@@ -3,10 +3,10 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
-export const addContac = () => {
+export const addContact = () => {
 	const { store, actions } = useContext (Context);
 	const [ contact, setContact] = useState ({
-	     name: "",
+	         name: "",
              email: "",
              phone: "",
              address: ""
@@ -20,9 +20,9 @@ export const addContac = () => {
 		if (selectedContact) {
 		   setContact({
 		      name: selectedContact.name,
-                      email: selectedContact.email,
-                      phone: selectedContact.phone,
-                      address: selectedContact.address
+              email: selectedContact.email,
+              phone: selectedContact.phone,
+              address: selectedContact.address
 		   });
 		}
 	    }
