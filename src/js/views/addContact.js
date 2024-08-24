@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
-export const addContact = () => {
+export const AddContact = () => {
 	const { store, actions } = useContext (Context);
 	const [ contact, setContact] = useState ({
 	         name: "",
