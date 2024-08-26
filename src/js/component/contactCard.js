@@ -7,7 +7,7 @@ export const ContactCard = ({ id, name, address, phone, email, onDeleteClick }) 
         <li className="list-group-item">
             <div className="row w-100">
                 <div className="col-12 col-sm-6 col-md-3 px-0">
-                    <img src="https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg" className="rounded-circle mx-auto d-block img-fluid" />
+                    <img src="https://picsum.photos/300/300" className="rounded-circle mx-auto d-block img-fluid" />
                 </div>
                 <div className="col-12 col-sm-6 col-md-9 text-sm-left d-flex justify-content-between">
                     <div className="d-flex flex-column">

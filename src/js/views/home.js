@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../../styles/home.css";
-import { contactCard } from "../component/contactCard";
+import { ContactCard } from "../component/contactCard";
 import { Context } from "../store/appContext";
 import Modal from "../component/modal";
 
