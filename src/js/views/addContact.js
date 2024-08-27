@@ -16,7 +16,7 @@ export const AddContact = () => {
 	
 	useEffect(() => {
 	    if (id) {
-		const selectedContact = store.contacts.find(contact => contact.id === parseIn(id));
+		const selectedContact = store.contacts.find(contact => contact.id === parseInt(id));
 		if (selectedContact) {
 		   setContact({
 		      name: selectedContact.name,
@@ -32,9 +32,16 @@ export const AddContact = () => {
 		setContact({ ...contact, [e.target.name]: e.target.value });
 	};
 			
-	const handleSubmit = (e) => {
-	 e.preventDefault();
-         if (id) {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        // Validación para asegurarse de que todos los campos están completos
+        if (!contact.name || !contact.email || !contact.phone || !contact.address) {
+            alert("Please fill in all fields.");
+            return;
+        }
+        
+        if (id) {
             actions.updateContact(parseInt(id), contact)
                 .then(() => {
                     navigate("/");
@@ -42,7 +49,7 @@ export const AddContact = () => {
                 .catch(error => {
                     console.error("Error updating contact:", error);
                 });
-          } else {
+        } else {
             actions.createContact(contact)
                 .then(() => {
                     navigate("/");
@@ -50,8 +57,9 @@ export const AddContact = () => {
                 .catch(error => {
                     console.error("Error creating contact:", error);
                 });
-       	 }
+        }
     };
+    
     return (
         <div className="container">
             <div>
